@@ -1,0 +1,30 @@
+﻿@model Patililer.Models.Siniflar.Ilanlar
+@{
+    ViewData["Title"] = "YeniIlan";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Yeni Ilan Ekleme</h1>
+<br />
+<form class="form-group"method="post">
+    @Html.LabelFor(x=>x.Baslik)
+    @Html.TextBoxFor(x=>x.Baslik, new {@class="form-control"})
+        <br />
+    @Html.LabelFor(x=>x.Tarih)
+    @Html.TextBoxFor(x=>x.Tarih,new {@class="form-control"})
+        <br />
+    @Html.LabelFor(x=>x.Yas)
+    @Html.TextBoxFor(x=>x.Yas,new {@class="form-control"})
+        <br />
+    @Html.LabelFor(x=>x.Cinsiyet)
+    @Html.TextBoxFor(x=>x.Cinsiyet,new {@class="form-control"})
+        <br />
+    @Html.LabelFor(x=>x.Aciklama)
+    @Html.TextBoxFor(x=>x.Aciklama,new {@class="form-control"})
+        <br />
+    @Html.LabelFor(x=>x.IlanImage)
+    @Html.TextBoxFor(x=>x.IlanImage,new {@class="form-control"})
+        <br />
+    <button class="btn btn-primary">İlan Kaydet</button>
+</form>
+

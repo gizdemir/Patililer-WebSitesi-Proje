@@ -1,0 +1,35 @@
+﻿@model Patililer.Models.Siniflar.Ilanlar
+@{
+    ViewData["Title"] = "IlanGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Ilan Güncelle Sayfası</h1>
+<br />
+@using (Html.BeginForm("IlanGuncelle", "Admin", FormMethod.Post)) 
+{
+            @Html.LabelFor(x=>x.ID)
+    @Html.TextBoxFor(x=>x.ID, new {@class="form-control",@readonly="readonly"})
+    <br />
+
+    @Html.LabelFor(x=>x.Baslik)
+    @Html.TextBoxFor(x=>x.Baslik, new {@class="form-control"})
+    <br />
+    @Html.LabelFor(x=>x.Tarih)
+    @Html.TextBoxFor(x=>x.Tarih,new {@class="form-control"})
+        <br />
+    @Html.LabelFor(x=>x.Yas)
+    @Html.TextBoxFor(x=>x.Yas,new {@class="form-control"})
+        <br />
+    @Html.LabelFor(x=>x.Cinsiyet)
+    @Html.TextBoxFor(x=>x.Cinsiyet,new {@class="form-control"})
+        <br />
+    @Html.LabelFor(x=>x.Aciklama)
+    @Html.TextAreaFor(x=>x.Aciklama,5,1,new {@class="form-control"})
+        <br />
+    @Html.LabelFor(x=>x.IlanImage)
+    @Html.TextBoxFor(x=>x.IlanImage,new {@class="form-control"})
+    <br />
+    <button class="btn btn-success">İlan Güncelle</button>
+}
+

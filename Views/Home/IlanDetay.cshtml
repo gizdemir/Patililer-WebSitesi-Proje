@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "IlanDetay";
+    Layout = "~/Views/Home/_Layout.cshtml";
+}
+
+    
+<h1>IlanDetay</h1>
+
+ <form action="#" method="post" id="commentform" class="validate-form">
+  <p>  
+  <label for="comment_author">İsim ve Soyisim <span class="required">*</span></label>  
+  <input type="text" name="comment_author" id="comment_author" placeholder="İsminiz ve Soyisimizi Yazınız." value="" tabindex="1" class="input required span5">  
+  </p>  
+  <p>  
+  <label for="email">Mail Adresiniz <span class="required">*</span></label>  
+  <input type="text" name="email" id="email" placeholder="Mail adresinizi gizli tutulur." tabindex="2" class="input required email span5">  
+  </p>  
+  <p>  
+  <label for="comment">Your message <span class="required">*</span></label>  
+  <textarea name="comment" id="comment" rows="10" placeholder="Kelimelerinizi bizimle paylaşın." tabindex="4" class="input textarea required span5"></textarea>  
+  </p>  
+  <p>  
+  <input name="submit" type="submit" value="Yorumu Gönder" class="btn-warning btn-large">  
+  </p>  
+  </form>  

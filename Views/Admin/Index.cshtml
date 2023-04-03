@@ -1,0 +1,40 @@
+﻿@using Patililer.Models.Siniflar
+@model List<Ilanlar>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>İlan Listesi</h1>
+<br />
+<table class="table table-bordered">
+    <tr>
+    <th>ID</th>
+    <th>Başlık</th>
+    <th>Tarih</th>
+    <th>Yaş</th>
+    <th>Cinsiyet</th>
+    <th>Açıklama</th>
+    <th>IlanImage</th>
+    <th>Sil</th>
+    <th>Güncelle</th>
+    <th>Detaylar</th>
+    </tr>
+    @foreach(var x in Model)
+    {
+        
+    <tr>
+        <td>@x.ID</td>
+        <td>@x.Baslik</td>
+        <td>@x.Tarih</td>
+        <td>@x.Yas</td>
+        <td>@x.Cinsiyet</td>
+        <td>@x.Aciklama</td>
+        <td>@x.IlanImage</td>
+        <td><a href="/Admin/IlanSil/@x.ID"class="btn btn-danger">Sil</a></td>
+        <td><a href="/Admin/IlanGetir/@x.ID"class="btn btn-warning">Güncelle</a></td>
+        <td><a href="#"class="btn btn-default">Detaylar</a></td>
+    </tr>
+    }
+</table>
+<a href="/Admin/YeniIlan" class="btn btn-primary">Yeni İlan</a>

@@ -1,0 +1,246 @@
+﻿@using Patililer.Models.Siniflar
+@model List<Ilanlar>
+@{
+    ViewBag.title = "Index";
+}
+<head>
+    <!-- font awesome style -->
+    <link href="~/client/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- lightbox -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" rel="stylesheet" />
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="~/client/css/bootstrap.css" />
+
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="~/client/css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="~/client/css/responsive.css" rel="stylesheet" />
+</head>
+
+<section class=" slider_section position-relative">
+    <div class="slider_bg_box">
+        <img src="~/client/images/slider-bg.jpg" alt="">
+    </div>
+    <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-7 col-lg-6">
+                            <div class="detail-box">
+                                <h1>
+                                    PATİLİ DÜNYASINA
+                                    <br>HOŞGELDİNİZ
+                                </h1>
+                                <p>
+                                    Satın almayın, sahiplenin!
+                                </p>
+
+                                <div class="btn-box">
+                                       <ul style="list-style: none">
+                                            <li class="nav-item" "@ViewBag.Title==" KayitOl"?"active":"")"></li> 
+                                                <a href="@Url.Action("KayitOl","Hesap")"class="btn-1">
+                                                KAYIT OL 
+                                                </a>
+
+                                            <li class="nav-item" "@ViewBag.Title==" Iletisim"?"active":"")"></li>
+                                            <a href="@Url.Action("Iletisim","Home")" class="btn-2">
+                                        İletişim
+                                    </a>
+                                       </ul>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+  </div>
+<!-- end slider section -->
+
+
+
+<!-- end about section -->
+
+    <section class="wedo_section layout_padding-bottom">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+            <br /><br />
+          <hr>
+          Ne yapıyoruz?
+          <hr>
+        </h2>
+        
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="~/client/images/s1.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h6>
+                PATİLİLERİN Yuva ARAYIŞI Yardımı
+              </h6>
+              <p>
+                Eğer bakamadığınızı düşündüğünüz veya yolda yalnız bir patili bulursanız kayıt olun ve patili dostumuzu ekleyin.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="~/client/images/s2.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h6>
+                GÜVENİLİRLİK ARAŞTIRMASI
+              </h6>
+              <p>
+                İlanın doğruluğunu tespit ederiz.Sahiplendirme adı altında dolandırıcılığın önüne geçeriz.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="~/client/images/s3.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h6>
+                PATİLİLERİN Huzurlu EVİNE YOLCULUĞU
+              </h6>
+              <p>
+                Sahiplendirdiğimiz patililerin evine ulaşması için elimizden geleni yaparız.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end wedo section -->
+
+            
+  <!-- gallery section -->
+
+  
+  <div>
+    
+    <font face="tahoma" size="5" color="black">
+    <b>İLAN VERME KURALLARI</b>
+    <br /><br />
+     </font>
+     <font face="tahoma" size="4" color="black"></font>
+    <div class="col-lg-12 menu-item "style="text-align: left">                             
+    <ol type="1" >
+  <li> İlan verebilmek için Hayvanları Koruma Kanunu ve Kara Avcılığı Kanunu ile belirlenen şart ve yükümlülüklerin yerine getirilmesi gerekmektedir.</li>
+  <li> İlan başlığında ve ilan açıklama bölümünde sadece ilgili hayvan hakkındaki bilgiler yer almalıdır.
+     
+     
+  </li>
+  <li>Evcil hayvanlar satışı yapılamaz. Satışa yönelik faaliyetleri gerçekleştiren üyelerin ilanları silinebilir, üyelikleri dondurulabilir ve/veya üyelikleri iptal edilebilir.<br /></li>
+  <li>Sahiplendirmek için verilen ilanların açıklama bölümünde “Aşı, mama, veteriner parası talep edilmeyecektir. Tamamen ücretsiz sahiplendirilecektir.” bu ve bu anlamdaki ibarelerin eklenmesini gerekmektedir.</li>
+  <li>İlan girişlerinde belirtilen kriterlerde (yaş, cins vb.) doğru bilgiler yer almalıdır.</li>
+  <li>Eklenen fotoğrafların içeriğinde firma logoları veya farklı e-ticaret web sitelerinin link, logo ya da isimleri yer almamalıdır.</li>
+  <li>Sistem içerisindeki farklı bir kullanıcının fotoğrafları kullanılmamalıdır.</li>
+</ol>
+    
+    
+  </div>
+
+
+  <!-- end gallery section -->
+
+          <!-- client section -->
+
+  <section class="client_section layout_padding">
+    <div class="client_bg_box">
+      <img src="~/client/images/istockphoto-1186143372-612x612.jpg" alt="">
+    </div>
+    <div class="container ">
+      <div class="heading_container heading_center">
+
+        <h2>        
+          Kullanıcı Yorumları         
+        </h2>
+        <br /><br />
+      </div>
+      <div class="row">
+        <div class="col-md-7">
+          <div class="box">
+            <div class="img-box">
+              <img src="~/client/images/client1.jpg" alt="" class="box-img">
+            </div>
+            <div class="detail-box">
+              <div class="client_id">
+                <div class="client_info">
+                  <h6>
+                    Kaan Aydın
+                  </h6>
+                  
+                </div>
+                <i class="fa fa-quote-left" aria-hidden="true"></i>
+              </div>
+              <p>
+               Güvenilir bir site olmuş. Sokakta bulduğum dostumu sahiplendirmek için bu siteye kayıt oldum. Çok memnunum. </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7 offset-md-5">
+          <div class="box">
+            <div class="img-box">
+              <img src="~/client/images/client2.jpg" alt="" class="box-img">
+            </div>
+            <div class="detail-box">
+              <div class="client_id">
+                <div class="client_info">
+                  <h6>
+                    Fatma Uğur
+                  </h6>
+                  
+                </div>
+                <i class="fa fa-quote-left" aria-hidden="true"></i>
+              </div>
+              <p>
+                Çok faydalı bir site.Köpeğimi bu siteden sahiplendim. </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="box">
+            <div class="img-box">
+              <img src="~/client/images/client3.jpg" alt="" class="box-img">
+            </div>
+            <div class="detail-box">
+              <div class="client_id">
+                <div class="client_info">
+                  <h6>
+                    Murat Özcan
+                  </h6>
+                  
+                </div>
+                <i class="fa fa-quote-left" aria-hidden="true"></i>
+              </div>
+              <p>
+                Sonuna kadar güvenebilirsiniz. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end client section -->
+ 

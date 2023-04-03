@@ -1,0 +1,123 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>0661feb2-cb17-450f-9f82-501c3d45b032</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="wwwroot\client\css\bootstrap.css" />
+    <None Remove="wwwroot\client\css\font-awesome.min.css" />
+    <None Remove="wwwroot\client\css\responsive.css" />
+    <None Remove="wwwroot\client\css\site.css" />
+    <None Remove="wwwroot\client\css\style.css" />
+    <None Remove="wwwroot\client\css\style.css.map" />
+    <None Remove="wwwroot\client\css\style.scss" />
+    <None Remove="wwwroot\client\images\1-638BE8146DA96-530_393.jpg" />
+    <None Remove="wwwroot\client\images\about-img.jpg" />
+    <None Remove="wwwroot\client\images\client-bg.jpg" />
+    <None Remove="wwwroot\client\images\client1.jpg" />
+    <None Remove="wwwroot\client\images\client2.jpg" />
+    <None Remove="wwwroot\client\images\client3.jpg" />
+    <None Remove="wwwroot\client\images\favicon.png" />
+    <None Remove="wwwroot\client\images\istockphoto-1086004080-612x612.jpg" />
+    <None Remove="wwwroot\client\images\istockphoto-1186143372-612x612.jpg" />
+    <None Remove="wwwroot\client\images\logo.png" />
+    <None Remove="wwwroot\client\images\menu.png" />
+    <None Remove="wwwroot\client\images\s1.png" />
+    <None Remove="wwwroot\client\images\s2.png" />
+    <None Remove="wwwroot\client\images\s3.png" />
+    <None Remove="wwwroot\client\images\Satın alma, sahiplen!.jpg" />
+    <None Remove="wwwroot\client\images\search-icon.png" />
+    <None Remove="wwwroot\client\images\shield.svg" />
+    <None Remove="wwwroot\client\images\slider-bg.jpg" />
+    <None Remove="wwwroot\client\images\yavru-kedi-yavru-kopek.jpg" />
+    <None Remove="wwwroot\client\js\bootstrap.js" />
+    <None Remove="wwwroot\client\js\custom.js" />
+    <None Remove="wwwroot\client\js\jquery-3.4.1.min.js" />
+    <None Remove="wwwroot\client\js\site.js" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap-grid.css" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap-grid.min.css" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap-grid.rtl.css" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap-reboot.css" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap-reboot.min.css" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap-utilities.css" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap-utilities.css.map" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap-utilities.min.css" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap.css" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap.min.css" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap.rtl.css" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap.rtl.css.map" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap.rtl.min.css" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\js\bootstrap.esm.js" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\js\bootstrap.esm.js.map" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\js\bootstrap.esm.min.js" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\js\bootstrap.esm.min.js.map" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\js\bootstrap.js" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\js\bootstrap.js.map" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <None Remove="wwwroot\client\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+    <None Remove="wwwroot\client\lib\bootstrap\LICENSE" />
+    <None Remove="wwwroot\client\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <None Remove="wwwroot\client\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <None Remove="wwwroot\client\lib\jquery-validation-unobtrusive\LICENSE.txt" />
+    <None Remove="wwwroot\client\lib\jquery-validation\dist\additional-methods.js" />
+    <None Remove="wwwroot\client\lib\jquery-validation\dist\additional-methods.min.js" />
+    <None Remove="wwwroot\client\lib\jquery-validation\dist\jquery.validate.js" />
+    <None Remove="wwwroot\client\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <None Remove="wwwroot\client\lib\jquery-validation\LICENSE.md" />
+    <None Remove="wwwroot\client\lib\jquery\dist\jquery.js" />
+    <None Remove="wwwroot\client\lib\jquery\dist\jquery.min.js" />
+    <None Remove="wwwroot\client\lib\jquery\dist\jquery.min.map" />
+    <None Remove="wwwroot\client\lib\jquery\LICENSE.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CsQuery" Version="1.3.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\client\images\hayvanlar\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Hesap\Aktivasyon.cshtml" />
+    <None Include="Views\Hesap\EpostaOnayHatirlatmasi.cshtml" />
+    <None Include="Views\Hesap\Giris.cshtml" />
+    <None Include="Views\Hesap\KayitOl.cshtml" />
+    <None Include="Views\Hesap\SifremiUnuttum.cshtml" />
+  </ItemGroup>
+
+</Project>

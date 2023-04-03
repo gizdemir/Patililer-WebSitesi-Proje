@@ -1,0 +1,548 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+   @* stayle scss 152 bak *@
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="shortcut icon" href="~/client/images/favicon.png" type="image/x-icon">
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>PATİLİLER</title>
+
+    <!-- font awesome style -->
+    <link href="~/client/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- lightbox -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" rel="stylesheet" />
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="~/client/css/bootstrap.css" />
+
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="~/client/css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="~/client/css/responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+    @*kar teması başlama yeri*@
+    <script src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
+    <script>
+        var sf = new Snowflakes({
+            count: 80,
+            color: "#5ec4ff",
+            speed: 1
+        });
+    </script>
+    @* kar teması bitiş yeri*@
+    <div class="hero_area">
+        <!-- header section strats -->
+        <header class="header_section">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg custom_nav-container ">
+                    <a class="navbar-brand" asp-controller="" asp-action="">
+                        <img src="~/client/images/logo.png" alt=""width="500" height="50" /> @*buseninki orjinali *@
+                       @* <img src="~/client/images/Adsız tasarım (4).gif" alt=""width="500" height="50"/>*@
+                        <span>
+                            PATİLİLER
+                        </span>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class=""> </span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ">
+                            <li class="nav-item " @ViewBag.Title= ="Anasayfa" ?"active":"")">
+                                <a class="nav-link" href="@Url.Action("Index","Home")"> ANASAYFA </a>
+
+
+                            </li>
+                            <li class="nav-item" "@ViewBag.Title==" Hakkimizda"?"active":"")">
+                                <a class="nav-link" href="@Url.Action("Hakkimizda","Home")"> HAKKIMIZDA </a>
+
+
+                            </li>
+                            <li class="nav-item" @ViewBag.Title= ="Ilanlar" ?"active":"")">
+                                <a class="nav-link" href="@Url.Action("Ilanlar","Home")"> İLANLAR </a>
+                            </li>
+                            <li class="nav-item" "@ViewBag.Title==" Iletisim"?"active":"")">
+                                <a class="nav-link pr-lg-0" href="@Url.Action("Iletisim","Home")"> İLETİŞİM </a>
+                            </li>
+                                                       
+                            <li class="nav-item" "@ViewBag.Title==" Giris"?"active":"")">
+                                <a class="nav-link" href="@Url.Action("Giris", "Hesap")"> GİRİŞ YAP </a>
+
+
+                            </li>
+                              <li class="nav-item" "@ViewBag.Title==" KayitOl"?"active":"")">
+                                <a class="nav-link" href="@Url.Action("KayitOl","Hesap")"> KAYIT OL </a>
+
+
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- end header section -->
+        @RenderBody()
+        <!-- slider section -->
+        @* <section class=" slider_section position-relative">
+        <div class="slider_bg_box">
+        <img src="~/client/images/slider-bg.jpg" alt="">
+        </div>
+        <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+        <div class="row">
+        <div class="col-md-7 col-lg-6">
+        <div class="detail-box">
+        <h1>
+        PATİLİ DÜNYASINA
+        <br>HOŞGELDİNİZ
+        </h1>
+        <p>
+        Satın almayın, sahiplenin!
+        </p>
+        <div class="btn-box">
+        <a href="" class="btn-1">
+        Kayıt Ol
+        </a>
+        <a href="" class="btn-2">
+        İletişim
+        </a>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        </div>
+        </section>
+        <!-- end slider section -->
+        </div>
+
+        <!-- about section -->
+
+        <section class="about_section layout_padding">
+        <div class="container">
+        <div class="row">
+        <div class="col-lg-6">
+        <div class="img-box">
+        <img src="~/client/images/yavru-kedi-yavru-kopek.jpg" alt="" />
+        </div>
+        </div>
+        <div class="col-lg-6">
+        <div class="detail-box">
+        <div class="heading_container">
+        <h2>
+        Hakkımızda
+        <hr>
+        </h2>
+        </div>
+        <p>
+        Biz patililer olarak satın almaya karşıyız.O yüzden de satın alma sahiplen sözü altında bu platformu kurduk.Sende satın alma, onlara yuva ol.
+        </p>
+
+        </div>
+        </div>
+        </div>
+        </div>
+        </section>
+
+        <!-- end about section -->
+
+        <!-- wedo section -->
+
+        <section class="wedo_section layout_padding-bottom">
+        <div class="container">
+        <div class="heading_container heading_center">
+        <h2>
+        <hr>
+        Ne yapıyoruz?
+        <hr>
+        </h2>
+
+        </div>
+        <div class="row">
+        <div class="col-md-4">
+        <div class="box">
+        <div class="img-box">
+        <img src="~/client/images/s1.png" alt="">
+        </div>
+        <div class="detail-box">
+        <h6>
+        PATİLİLERİN Yuva ARAYIŞI Yardımı
+        </h6
+        <p>
+        Eğer bakamadığınızı düşündüğünüz veya yolda yalnız bir patili bulursanız kayıt olun ve patili dostumuzu ekleyin.
+        </p>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="box">
+        <div class="img-box">
+        <img src="~/client/images/s2.png" alt="">
+        </div>
+        <div class="detail-box">
+        <h6>
+        GÜVENİLİRLİK ARAŞTIRMASI
+        </h6>
+        <p>
+        İlanın doğruluğunu tespit ederiz.Sahiplendirme adı altında dolandırıcılığın önüne geçeriz.
+        </p>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="box">
+        <div class="img-box">
+        <img src="~/client/images/s3.png" alt="">
+        </div>
+        <div class="detail-box">
+        <h6>
+        PATİLİLERİN Huzurlu EVİNE YOLCULUĞU
+        </h6>
+        <p>
+        Sahiplendirdiğimiz patililerin evine ulaşması için elimizden geleni yaparız.
+        </p>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </section>
+
+        <!-- end wedo section -->
+
+        <!-- gallery section -->
+
+        <div class="gallery_section ">
+        <div class="container-fluid">
+
+        <div class="heading_container heading_center">
+        <h2>
+        <hr>
+        Patililer
+        <hr>
+        </h2>
+
+        </div>
+        <div class="row">
+        <div class=" col-sm-8 col-md-6 px-0">
+        <div class="img-box">
+        <img src="~/client/images/1-638BE8146DA96-530_393.jpg" alt="">
+        <div class="btn-box">
+        <a href="~~/client/~/client/images/1-638BE8146DA96-530_393.jpg" data-toggle="lightbox" class="btn-1">
+        <i class="fa fa-picture-o" aria-hidden="true"></i>
+        </a>
+        </div>
+        </div>
+        </div>
+        <div class="col-sm-4 col-md-3 px-0">
+        <div class="img-box">
+        <img src="~/client/images/g2.jpg" alt="">
+        <div class="btn-box">
+        <a href="~/client/images/g2.jpg" data-toggle="lightbox" class="btn-1">
+        <i class="fa fa-picture-o" aria-hidden="true"></i>
+        </a>
+        </div>
+        </div>
+        </div>
+        <div class="col-sm-6 col-md-3 px-0">
+        <div class="img-box">
+        <img src="~/client/images/g3.jpg" alt="">
+        <div class="btn-box">
+        <a href="~/client/images/g3.jpg" data-toggle="lightbox" class="btn-1">
+        <i class="fa fa-picture-o" aria-hidden="true"></i>
+        </a>
+        </div>
+        </div>
+        </div>
+        <div class="col-sm-6 col-md-3 px-0">
+        <div class="img-box">
+        <img src="~/client/images/g4.jpg" alt="">
+        <div class="btn-box">
+        <a href="~/client/images/g4.jpg" data-toggle="lightbox" class="btn-1">
+        <i class="fa fa-picture-o" aria-hidden="true"></i>
+        </a>
+        </div>
+        </div>
+        </div>
+        <div class="col-sm-4 col-md-3 px-0">
+        <div class="img-box">
+        <img src="~/client/images/g5.jpg" alt="">
+        <div class="btn-box">
+        <a href="~/client/images/g5.jpg" data-toggle="lightbox" class="btn-1">
+        <i class="fa fa-picture-o" aria-hidden="true"></i>
+        </a>
+        </div>
+        </div>
+        </div>
+        <div class="col-sm-8 col-md-6 px-0">
+        <div class="img-box">
+        <img src="~/client/images/g6.jpg" alt="">
+        <div class="btn-box">
+        <a href="~/client/images/g6.jpg" data-toggle="lightbox" class="btn-1">
+        <i class="fa fa-picture-o" aria-hidden="true"></i>
+        </a>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        <!-- end gallery section -->
+
+        <!-- client section -->
+
+        <section class="client_section layout_padding">
+        <div class="client_bg_box">
+        <img src="~/client/images/istockphoto-1186143372-612x612.jpg" alt="">
+        </div>
+        <div class="container ">
+        <div class="heading_container heading_center">
+        <h2>
+        Kullanıcı Yorumları
+        </h2>
+        </div>
+        <div class="row">
+        <div class="col-md-7">
+        <div class="box">
+        <div class="img-box">
+        <img src="~/client/images/client1.jpg" alt="" class="box-img">
+        </div>
+        <div class="detail-box">
+        <div class="client_id">
+        <div class="client_info">
+        <h6>
+        Kaan Aydın
+        </h6>
+
+        </div>
+        <i class="fa fa-quote-left" aria-hidden="true"></i>
+        </div>
+        <p>
+        Güvenilir bir site olmuş. Sokakta bulduğum dostumu sahiplendirmek için bu siteye kayıt oldum. Çok memnunum. </p>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-7 offset-md-5">
+        <div class="box">
+        <div class="img-box">
+        <img src="~/client/images/client2.jpg" alt="" class="box-img">
+        </div>
+        <div class="detail-box">
+        <div class="client_id">
+        <div class="client_info">
+        <h6>
+        Fatma Uğur
+        </h6>
+
+        </div>
+        <i class="fa fa-quote-left" aria-hidden="true"></i>
+        </div>
+        <p>
+        Çok faydalı bir site.Köpeğimi bu siteden sahiplendim. </p>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-7">
+        <div class="box">
+        <div class="img-box">
+        <img src="~/client/images/client3.jpg" alt="" class="box-img">
+        </div>
+        <div class="detail-box">
+        <div class="client_id">
+        <div class="client_info">
+        <h6>
+        Murat Özcan
+        </h6>
+
+        </div>
+        <i class="fa fa-quote-left" aria-hidden="true"></i>
+        </div>
+        <p>
+        Sonuna kadar güvenebilirsiniz. </p>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </section>
+
+        <!-- end client section -->
+
+        <!-- contact section -->
+
+        <section class="contact_section layout_padding">
+        <div class="container ">
+        <div class="heading_container ">
+        <h2 class="">
+        Bize Ulaşın
+        <hr>
+        </h2>
+        </div>
+        </div>
+        <div class="container">
+        <div class="row">
+        <div class="col-md-6 ">
+        <form action="#">
+        <div>
+        <input type="text" placeholder="İsim" />
+        </div>
+        <div>
+        <input type="email" placeholder="Mail" />
+        </div>
+        <div>
+        <input type="text" placeholder="Telefon Numarası" />
+        </div>
+        <div>
+        <input type="text" class="message-box" placeholder="Mesaj" />
+        </div>
+        <div class="btn-box">
+        <button>
+        GÖNDER
+        </button>
+        </div>
+        </form>
+        </div>
+        <div class="col-md-6">
+        <div class="map_container">
+        <div class="map">
+        <div id="googleMap"></div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </section>
+
+        <!-- end contact section -->*@
+
+
+        <!-- info section -->
+        <section class="info_section">
+            <div class="container">
+                <div class="info_form">
+                    <div class="row">
+                        <div class="offset-lg-3 col-lg-3">
+                            <h5 class="form_heading">
+                            </h5>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="info_logo">
+                            <div>
+                                <a href="">
+                                    <img src="~/client/images/logo.png" alt="" />
+                                    <span>
+                                        PATİLİLER
+                                    </span>
+                                </a>
+                            </div>
+                            <p>
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="info_links ">
+                            <h5>
+                                İLETİŞİM
+                            </h5>
+                            <div class="info_contact">
+                                <div class="contact_link_box">
+                                    <a href="">
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <span>
+                                         KONUM
+                                        </span>
+                                    </a>
+                                    <a href="">
+                                        <i class="fa fa-phone" aria-hidden="true"></i>
+                                        <span>
+                                            Ara +01 1234567890
+                                        </span>
+                                    </a>
+                                    <a href="">
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                        <span>
+                                            demo@gmail.com
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="info_social">
+                                <a href="">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- end info_section -->
+        <!-- footer section -->
+        <footer class="footer_section">
+            <div class="container">
+                <p>
+                    &copy; <span id="displayYear"></span>  Designed by All Rights Reserved By
+                    <a href="https://html.design/"></a>
+                </p>
+            </div>
+        </footer>
+        <!-- footer section -->
+
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <!-- lightbox -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js  "></script>
+        <!-- custom js -->
+        <script src="js/custom.js"></script>
+        <!-- Google Map -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+        </script>
+        <!-- End Google Map -->
+
+</body>
+
+</html>
